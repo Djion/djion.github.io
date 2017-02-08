@@ -42,7 +42,7 @@ button{
 .weekYear{
 	text-align: center;
 	/*margin: auto;*/
-	padding-right:20%;
+	padding-bottom:10px;
 }
 
 h2{
@@ -53,6 +53,10 @@ h2{
 h1{
 	text-align: center;
 }
+
+h3{
+	text-align: center;
+}
 p{
 	width: 50%;
 	margin: auto;
@@ -60,7 +64,6 @@ p{
 }
 
 .clearButton{
-	float: left;
 	height: 30px;
 	width: 150px;
 	font-size: 22px;
@@ -73,13 +76,18 @@ p{
 
 </style>
 </head>
-<h1> Continuing ED Enrollment Data version 3</h1>
-<button class="clearButton" id="clearAll" onclick="clearAll()">Clear All</button>
-<button class="clearButton" id="loadCharts" onclick="loadCharts()">Show Charts</button>
+<h1> Continuing ED Enrollment Data version 2.0</h1>
+<h3> Choose a semester, a course, or both and then click on the Show Charts button to view the selected data. </h3><h3>You can always select more by clicking Show Charts multiple times. If you would like to close all displayed charts click Clear All. </h3>
+
 <body>
+
 <div class="weekYear">
 	<button id="weekButton" onclick="showWeek()" style="width:150px;">Semesters</button>
 	<button id="yearButton" onclick="showYear() "style="width:150px;">Courses</button>
+</div>
+<div class="weekYear">
+	<button class="clearButton" id="clearAll" onclick="clearAll()">Clear All</button>
+	<button class="clearButton" id="loadCharts" onclick="loadCharts()">Show Charts</button>
 </div>
 
 <div id="weekGroup" class="buttonGroup">
