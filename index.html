@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-	body{text-align: center;}
+	body{text-align: center;
+		background: #1c2329;}
 	select{
-		background: transparent;
+		background: #1c2329;
 		font-size: 14px;
 		height: 29px;
 		padding: 5px;
 		width: 268px;
+		color: #ffffff;
 	}
 	#statDiv{
 		margin-top:50px;
@@ -16,6 +18,11 @@
 	#priorityList{
 		display: none;
 	}
+
+	h1 { color: #ffffff; font-family: 'Lato', sans-serif; font-size: 54px; font-weight: 300; line-height: 58px; }
+	h2 {color: #ffffff; font-family: 'Lato', sans-serif; font-size: 40px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }
+	h3 {color: #ffffff; font-family: 'Lato', sans-serif; font-size: 54px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }
+	p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
 </style>
 <body>
 
@@ -34,8 +41,8 @@
 </select>
 <select id="relicList" onchange="configureRelicData(this,document.getElementById('relicData'))"></select>
 
-<h1 id="relicData">
-</h1>
+<h2 id="relicData">
+</h2>
 
 <div id="statDiv">
 	<h1>Stat Priorities</h1>
