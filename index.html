@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-	body{
-		text-align: center;
-	}
+	body{text-align: center;}
 	select{
 		background: transparent;
 		font-size: 14px;
 		height: 29px;
 		padding: 5px;
 		width: 268px;
+	}
+	#statDiv{
+		margin-top:50px;
+	}
+
+	#priorityList{
+		display: none;
 	}
 </style>
 <body>
@@ -32,10 +37,49 @@
 <h1 id="relicData">
 </h1>
 
+<div id="statDiv">
+	<h1>Stat Priorities</h1>
 
+	<button onclick="showHideStats()">Show/Hide</button>
+	
+	<div id="priorityList">
+	<h3>Dps</h3>
+	<p> Warlock: Mastery>Crit/Haste </p>
+	<p>	Pally: Crit/Haste </p>
+	<p>	Warrior: Mastery>Haste </p>
+	<p>	Death Knight: Mastery>Crit </p>
+	<p>	Hunter (Beast Mastery): Crit>Mastery </p>
+	<p>	Hunter (Marksmanship): Mastery>Crit </p>
+	<p>	Druid: Haste>Mastery </p>
+	<p>	Demon Hunter: Crit>Versatility/haste </p>
+	<p>	Mage: Frozen Veins> Versatility>Haste </p>
+	<p>	Monk: Fists of the Wind> Mastery>Crit </p>
+	<p>	Rogue: Soul Shadows> Mastery>Versatility </p>
+
+	<h3>Healers: </h3>
+	<p>	Monk: Crit>Versatility </p>
+	<p>	Priest: Mastery>Crit </p>
+	<p>	Druid: Mastery>Haste </p>
+	<p>	Shaman: Crit </p>
+
+	<h3>Tanks: </h3>
+	<p>	Druid: Mastery/Versatility </p>
+	<p>	Paladin: Haste/Versatility</p>
+	</div>
+</div>
 </body>
 
 <script type="text/javascript">
+
+	function showHideStats(){
+		var pick = document.getElementById('priorityList');
+		if (pick.style.display === 'none'){
+			pick.style.display = 'block';
+		} 
+		else{
+			pick.style.display = 'none';
+		}
+	}
 	function configureRelicLists(bossList,relicList) {
 		var goroth = ["Select A Relic","Charred Hymnal of the Moon", "Imploding Infernal Star","Icon of Perverse Animation", "Brand of Relentless Agony","Felsoul Vortex"]
 		var demonic = ["Select A Relic","Inexorable Truth Serum", "Blood of the Unworthy","Smoldering Thumbscrews","Inquisitions Master Key"]
